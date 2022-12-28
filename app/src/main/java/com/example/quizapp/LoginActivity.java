@@ -2,13 +2,25 @@ package com.example.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-public class LoginActivity extends AppCompatActivity {
+import com.example.quizapp.databinding.ActivityLoginBinding;
 
+public class LoginActivity extends AppCompatActivity {
+ActivityLoginBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+
+        setContentView(binding.getRoot());
+
+        binding.createNewBtn.setOnClickListener(v->{
+            startActivity(new Intent(LoginActivity.this,SignupActivity.class));
+        });
+
+
+
     }
 }

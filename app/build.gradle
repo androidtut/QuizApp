@@ -6,6 +6,10 @@ android {
     namespace 'com.example.quizapp'
     compileSdk 32
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.example.quizapp"
         minSdk 21
